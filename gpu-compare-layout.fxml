@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.simulation.controller.GPUCompareController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView id="logo" fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@icons8-computer-80.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                    </VBox.margin></ImageView>
+                <Label id="header" text="PC BUILD SIMULATION" textFill="#e7e5e5">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Button id="btn-simulation" fx:id="btnSimulation" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#MenuSimulation" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Simulation" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons8-simulation-30.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button id="btn-compare-cpu" fx:id="btnCompareCPU" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#MenuCompareCPU" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Compare CPU">
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons8-cpu-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button id="btn-compare-gpu" fx:id="btnCompareGPU" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#MenuCompareGPU" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Compare GPU">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons8-gpu-32.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+            </children>
+        </VBox>
+        <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+            <children>
+                <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+                    <children>
+                        <Label id="header-2" layoutX="57.0" layoutY="25.0" text="GPU COMPARATION" textFill="#e7e5e5">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <HBox layoutY="43.0" prefHeight="137.0" prefWidth="793.0">
+                            <children>
+                                <VBox prefHeight="459.0" prefWidth="365.0">
+                                    <children>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Select Brand Graphics Card:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <ChoiceBox fx:id="brand1Select" prefHeight="25.0" prefWidth="211.0">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="10.0" />
+                                                    </HBox.margin>
+                                                </ChoiceBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets right="5.0" top="20.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Select Your graphics Card:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <ChoiceBox fx:id="series1Select" prefHeight="25.0" prefWidth="211.0">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="10.0" />
+                                                    </HBox.margin>
+                                                </ChoiceBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets right="5.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <Label id="header-2" text="VS" textFill="#e7e5e5">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets top="50.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <VBox prefHeight="137.0" prefWidth="386.0">
+                                    <children>
+                                        <HBox prefHeight="53.0" prefWidth="355.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Select Brand Graphics Card:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <ChoiceBox fx:id="brand2Select" prefHeight="25.0" prefWidth="211.0">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="10.0" />
+                                                    </HBox.margin>
+                                                </ChoiceBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets left="10.0" right="5.0" top="20.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Select Your Graphics Card:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <ChoiceBox fx:id="series2Select" prefHeight="25.0" prefWidth="211.0">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="10.0" />
+                                                    </HBox.margin>
+                                                </ChoiceBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Button id="btn-compare" fx:id="btnCompare" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="331.0" layoutY="180.0" mnemonicParsing="false" onAction="#compareNow" prefHeight="42.0" prefWidth="154.0" stylesheets="@style.css" text="Compare" textAlignment="CENTER" textFill="#e7e5e5">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </Button>
+                        <Label id="header-2" layoutX="376.0" layoutY="222.0" text="RESULT" textFill="#e7e5e5">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <HBox fx:id="boxResult" layoutY="249.0" prefHeight="137.0" prefWidth="793.0">
+                            <children>
+                                <VBox prefHeight="459.0" prefWidth="365.0">
+                                    <children>
+                                        <ImageView id="gpu1-logo" fx:id="gpu1LogoResult" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                            <VBox.margin>
+                                                <Insets left="125.0" />
+                                            </VBox.margin>
+                                            <image>
+                                                <Image url="@rtx.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label id="seri1-gpu" fx:id="gpu1SeriesResult" prefHeight="25.0" prefWidth="175.0" text="Nvidia RTX 4070 TI" textFill="#e7e5e5">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="102.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="GPU Core:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label id="core1-res" fx:id="core1Result" prefHeight="17.0" prefWidth="204.0" text="7.680 Cuda/240 Tensor/ 60 RT" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets right="5.0" top="20.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Memory Size/Type:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label id="mem1-res" fx:id="memory1Result" prefHeight="17.0" prefWidth="204.0" text="12GB / GDDR6X" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets right="5.0" />
+                                            </VBox.margin>
+                                        </HBox>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Buswidth/Bandwith:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label id="bus1-res" fx:id="bus1Result" prefHeight="17.0" prefWidth="204.0" text="192bit / 504.2 GB/s" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Boostclock:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label id="clock1-res" fx:id="clock1Result" prefHeight="17.0" prefWidth="204.0" text="2610 Mhz" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Avg Power Consumption:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label id="power1-res" fx:id="power1Result" prefHeight="17.0" prefWidth="204.0" text="226 Watt" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="53.0" prefWidth="360.0">
+                                            <children>
+                                                <Label id="header" prefHeight="17.0" prefWidth="204.0" text="3D Mark Timespy Bench:" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label id="bench1-res" fx:id="benchmark1Result" prefHeight="17.0" prefWidth="204.0" text="22.757" textFill="#e7e5e5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets top="15.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <VBox prefHeight="137.0" prefWidth="386.0">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                           <children>
+                              <ImageView id="gpu2-logo" fx:id="gpu2LogoResult" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@rx.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="150.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label id="seri2-gpu" fx:id="gpu2SeriesResult" prefHeight="18.0" prefWidth="191.0" text="AMD Radeon RX 7700 XT" textFill="#e7e5e5">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="110.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="53.0" prefWidth="360.0">
+                                 <children>
+                                    <Label id="header" prefHeight="17.0" prefWidth="204.0" text="GPU Core:" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label id="core2-res" fx:id="core2Result" prefHeight="17.0" prefWidth="204.0" text="3.456 Stream/54 CU/ 54 Ray" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="360.0">
+                                 <children>
+                                    <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Memory Size/Type:" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label id="mem2-res" fx:id="memory2Result" prefHeight="17.0" prefWidth="204.0" text="12GB / GDDR6" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="360.0">
+                                 <children>
+                                    <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Buswidth/Bandwith:" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label id="bus2-res" fx:id="bus2Result" prefHeight="17.0" prefWidth="204.0" text="192bit / 432 GB/s" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="360.0">
+                                 <children>
+                                    <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Boostclock:" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label id="clock2-res" fx:id="clock2Result" prefHeight="17.0" prefWidth="204.0" text="2544 Mhz" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="360.0">
+                                 <children>
+                                    <Label id="header" prefHeight="17.0" prefWidth="204.0" text="Avg Power Consumption:" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label id="power2-res" fx:id="power2Result" prefHeight="17.0" prefWidth="204.0" text="245 Watt" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="360.0">
+                                 <children>
+                                    <Label id="header" prefHeight="17.0" prefWidth="204.0" text="3D Mark Timespy Bench:" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label id="bench2-res" fx:id="benchmark2Result" prefHeight="17.0" prefWidth="204.0" text="17.002" textFill="#e7e5e5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+</AnchorPane>
