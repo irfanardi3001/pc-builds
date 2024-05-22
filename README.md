@@ -5,14 +5,14 @@ https://github.com/irfanardi3001/pc-builds/tree/main
 
 PC-BUILD-SIMULATION adalah aplikasi sederhana yang dirancang untuk membantu pengguna dalam melakukan perbandingan spesifikasi PC untuk berbagai skenario penggunaan. Proyek ini dibuat menggunakan Java dengan GUI berbasis .xml dan dikembangkan di IntelliJ IDEA.
 
-![Tampilan Aplikasi](src/images/Screenshot 2023-12-13 140123.png)
+![Tampilan Aplikasi](src/images/Screenshot1.png)
 
 ## Fitur Utama
 
 - Perbandingan spesifikasi PC berdasarkan kebutuhan pengguna (gaming, desain grafis, pemrograman, dll.)
-![Tampilan Aplikasi](src/images/Screenshot 2023-12-13 140326.png)
-![Tampilan Aplikasi](src/images/Screenshot 2023-12-13 140207.png)
-![Tampilan Aplikasi](src/images/Screenshot 2023-12-13 140242.png)
+![Tampilan Aplikasi](src/images/Screenshot2.png)
+![Tampilan Aplikasi](src/images/Screenshot3.png)
+![Tampilan Aplikasi](src/images/Screenshot4.png)
 - Antarmuka pengguna yang intuitif dan mudah digunakan
 
 ## Instalasi
